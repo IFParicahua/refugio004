@@ -12,7 +12,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Empresa</h5>
                 <p class="card-text">Todas las empresas sin importar el rubro pueden registrarse aquí.</p>
-                <a href="{{ url('registro-empresa') }}" class="btn btn-primary btn-sm">Registrar</a>
+                <a href="{{ url('registro/empresa') }}" class="btn btn-primary btn-sm">Registrar</a>
                 </div>
               </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Refugio</h5>
                 <p class="card-text">Todos los refugios de mascotas pueden registrarse aquí.</p>
-                <a href="{{ url('registro-refugio') }}" class="btn btn-primary btn-sm">Registrar</a>
+                <a href="{{ url('registro/refugio') }}" class="btn btn-primary btn-sm">Registrar</a>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Activista.</h5>
                 <p class="card-text">Si amas a los animales y no perteneces a un refugio o empresa registrate aquí.</p>
-                <a href="{{ url('registro-activista') }}" class="btn btn-primary btn-sm">Registrar</a>
+                <a href="{{ url('registro/activista') }}" class="btn btn-primary btn-sm">Registrar</a>
                 </div>
               </div>
             </div>

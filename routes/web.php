@@ -26,6 +26,10 @@ Route::get('/registro', function () {
     return view('auth.registro');
 });
 //Vista de registros
-Route::get('/registro-activista', 'IndexController@registro_activista');
-Route::get('/registro-empresa', 'IndexController@registro_empresa');
-Route::get('/registro-refugio', 'IndexController@registro_refugio');
+Route::get('/registro/activista', 'RegistroController@activista_view');
+Route::get('/registro/empresa', 'RegistroController@empresa_view');
+Route::get('/registro/refugio', 'RegistroController@refugio_view');
+Route::post('/activista/create', 'RegistroController@activista_save')->name('activista.create');
+Route::post('/empresa/create', 'RegistroController@empresa_save')->name('empresa.create');
+Route::post('/refugio/create', 'RegistroController@refugio_save')->name('refugio.create');
+

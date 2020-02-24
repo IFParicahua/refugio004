@@ -19,6 +19,7 @@ class CreatePublicacionRefugiosTable extends Migration
             $table->string('desc_publicacion_donacion');
             $table->string('valor_donacion')->nullable();
             $table->integer('estado_public');
+            $table->string('tipo_publicacion');
             $table->boolean('prioridad');
             $table->unsignedBigInteger('pkrefugio');
             $table->foreign('pkrefugio')->references('id')->on('refugios');

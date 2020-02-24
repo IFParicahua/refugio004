@@ -20,6 +20,7 @@ class CreateActividadesTable extends Migration
             $table->string('desc_actividad');
             $table->integer('estado');
             $table->integer('cupos');
+            $table->string('tipo_actividad');
             $table->unsignedBigInteger('pkrefugio');
             $table->string('dia')->nullable();
             $table->foreign('pkrefugio')->references('id')->on('refugios');

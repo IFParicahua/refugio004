@@ -14,19 +14,37 @@ class RubroSeeder extends Seeder
     {
         DB::table('rubros')->insert([
             [
-                'desc_rubro'=>'Tecnologia'
+                'desc_rubro'=>'Restaurante'
             ],[
-                'desc_rubro'=>'Ropa'
+                'desc_rubro'=>'Servicio de textileria o venta de ropa'
             ],[
-                'desc_rubro'=>'Alimentos'
+                'desc_rubro'=>'Articulos y servicios para la mascota'
             ],[
-                'desc_rubro'=>'Gastronomico'
+                'desc_rubro'=>'Arte y Entretenimiento'
             ],[
-                'desc_rubro'=>'Entretenimiento'
+                'desc_rubro'=>'Veterinaria'
             ],[
-                'desc_rubro'=>'Gastronomico'
+                'desc_rubro'=>'Agencia de viajes y turismo'
             ],[
-                'desc_rubro'=>'Accesorios'
+                'desc_rubro'=>'Bancos'
+            ],[
+                'desc_rubro'=>'Servicio de comida rapida'
+            ],[
+                'desc_rubro'=>'Cafetería'
+            ],[
+                'desc_rubro'=>'Heladería'
+            ],[
+                'desc_rubro'=>'Panadería o Pastelería'
+            ],[
+                'desc_rubro'=>'Dentista'
+            ],[
+                'desc_rubro'=>'Florería'
+            ],[
+                'desc_rubro'=>'Servicio de catering'
+            ],[
+                'desc_rubro'=>'Universidades'
+            ],[
+                'desc_rubro'=>'Belleza y cuidado cuidado personal'
             ]
         ]);
     }

@@ -1,0 +1,67 @@
+.myButton {
+    background-color:#b28dff;
+    border-radius:28px;
+    display:block;
+    cursor:pointer;
+    color:#ffffff;
+    padding:16px 31px;
+    text-decoration:none;
+}
+.myButton:hover {
+    text-decoration:none;
+    background-color:#9a4ef1;
+    color:#ffffff;
+}
+.menu{
+    background-color: #0093E9;background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
+}
+.texto-date{
+    font-size:12px
+}
+.profile-img{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -25%;
+    border: none;
+    background: #212529b8;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+.profile-img .file input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-edit-btn{
+    border-radius: 1.5rem;
+}

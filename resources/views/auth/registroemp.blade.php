@@ -44,7 +44,7 @@
                     @enderror
                 </div>
                 <div class=" form-group">
-                    <textarea class="form-control" placeholder="Descripcion del Refugio...." id="txtdescripcion" name="txtdescripcion" maxlength="500">{{old('txtdescripcion')}}</textarea>
+                    <textarea class="form-control" placeholder="Descripcion de la empresa...." id="txtdescripcion" name="txtdescripcion" maxlength="500">{{old('txtdescripcion')}}</textarea>
                 </div>
                 <div class="form-group">
                     <input type="email" name="txtemail" id="txtemail" class=" form-control @error('txtemail') is-invalid @enderror" required maxlength="255" value="{{ old('txtemail') }}" placeholder="Email">
@@ -144,9 +144,9 @@
                     <div class="form-group col-6">
                         <select class="custom-select @error('txtsexo') is-invalid @enderror" name="txtsexo" id="txtsexo" required >
                             <option selected>Sexo...</option>
-                            <option value="f">Femenino</option>
-                            <option value="m">Masculino</option>
-                            <option value="o">Otro</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Otro">Otro</option>
                         </select>
                         @error('txtsexo')
                             <span class="invalid-feedback" role="alert">

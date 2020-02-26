@@ -91,9 +91,9 @@
                     <div class="form-group col-6">
                         <select class="custom-select  @error('txtsexo') is-invalid @enderror" name="txtsexo" id="txtsexo" value="{{ old('txtsexo') }}">
                           <option value="">Sexo...</option>
-                          <option value="f" {{ old('txtsexo') ==  'Femenino' ? 'selected' : '' }}>Femenino</option>
-                          <option value="m" {{ old('txtsexo') ==  'Masculino' ? 'selected' : '' }}>Masculino</option>
-                          <option value="o" {{ old('txtsexo') ==  'Otro' ? 'selected' : '' }}>Otro</option>
+                          <option value="Femenino" {{ old('txtsexo') ==  'Femenino' ? 'selected' : '' }}>Femenino</option>
+                          <option value="Masculino" {{ old('txtsexo') ==  'Masculino' ? 'selected' : '' }}>Masculino</option>
+                          <option value="Otro" {{ old('txtsexo') ==  'Otro' ? 'selected' : '' }}>Otro</option>
                         </select>
                         @error('txtsexo')
                             <span class="invalid-feedback" role="alert">

@@ -43,4 +43,7 @@ class User extends Authenticatable
             'rol'
         );
     }
+    public function personaUser(){
+        return $this->hasOne('App\Persona','pkuser');
+    }
 }

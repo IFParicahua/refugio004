@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enlace extends Model
 {
+    protected $table = 'enlaces';
+
+
     public function tipoCuenta(){
         return $this->belongsTo(
             'App\Tipo_cuenta',

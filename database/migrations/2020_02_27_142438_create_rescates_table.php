@@ -15,14 +15,11 @@ class CreateRescatesTable extends Migration
     {
         Schema::create('rescates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('estado_salud');
             $table->integer('peso_rescatado');
-            $table->integer('edad_rescatado');
             $table->date('f_rescate');
             $table->string('lugar_rescate');
-            $table->string('detalle_rescate');
-            $table->unsignedBigInteger('pkpersona');
-            $table->foreign('pkpersona')->references('id')->on('personas');
+            $table->string('detalle_salud')->nullable();
+            $table->string('detalle_rescate')->nullable();
             $table->unsignedBigInteger('pkmascota');
             $table->foreign('pkmascota')->references('id')->on('mascotas');
             $table->timestamps();

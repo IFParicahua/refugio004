@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TipocuentaSeeder::class);
         $this->call(TiporefugioSeeder::class);
         $this->call(TipohorarioSeeder::class);
+        $this->call(SizeSeeder::class);
+
     }
 }

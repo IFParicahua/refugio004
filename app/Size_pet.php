@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Rescate extends Model
+class Size_pet extends Model
 {
-    protected $table = 'rescates';
+    protected $table = 'size_pets';
+
 }

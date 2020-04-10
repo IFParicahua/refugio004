@@ -18,8 +18,8 @@ class CreateEmpresasTable extends Migration
             $table->string('razonsocial');
             $table->string('sigla');
             $table->integer('nit');
-            $table->string('dir_empresa');
-            $table->string('desc_empresa')->nullable();
+            $table->string('dir_empresa',500);
+            $table->string('desc_empresa',500)->nullable();
             $table->unsignedBigInteger('pkrubro');
             $table->foreign('pkrubro')->references('id')->on('rubros');
             $table->unsignedBigInteger('pkpersona');

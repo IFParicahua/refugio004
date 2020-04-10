@@ -17,8 +17,8 @@ class CreateRefugiosTable extends Migration
             $table->bigIncrements('id');
             $table->string('nom_refugio');
             $table->integer('capacidad');
-            $table->string('dir_refugio');
-            $table->string('desc_refugio')->nullable();
+            $table->string('dir_refugio',500);
+            $table->string('desc_refugio',500)->nullable();
             $table->unsignedBigInteger('pktipo');
             $table->foreign('pktipo')->references('id')->on('tipo_refugios');
             $table->unsignedBigInteger('pkpersona');

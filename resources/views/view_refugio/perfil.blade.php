@@ -1,4 +1,4 @@
-@extends('layouts.menu_user')
+@extends('layouts.menu_refugio')
 @section('contenedor')
     <div class=" container rounded shadow p-3">
         <div class="row">
@@ -8,7 +8,7 @@
                     <div class="profile-img ml-5">
                         <img src="{{ asset('images/'.Auth::user()->imagen_perfil)}}" id="img-perfil" class="img-fluid" style="width:180px;height:180px;">
                         <div class="file btn btn-lg btn-primary">
-                            <p>Cambiar Foto</p>
+                            <p>Actualizar</p>
                             <input type="file" id="file_perfil" name="file_perfil" accept="image/x-png, image/jpeg" />
                         </div>
                     </div>
@@ -17,21 +17,21 @@
             </div>
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-8 col-md-9">
+                    <div class="col-7 col-md-9">
                         <h5> {{ Auth::user()->personaUser->refugio->nom_refugio}}</h5>
                     </div>
-                    <div class="col-4 col-md-3">
-                        <button type="button" class="btn btn-sm btn-outline-secondary profile-edit-btn border-0" data-toggle="modal" data-target="#modal-editar-empresa" >Editar Perfil de la Empresa</button>
+                    <div class="col-5 col-md-3">
+                        <button type="button" class="btn btn-sm btn-outline-secondary profile-edit-btn border-0" data-toggle="modal" data-target="#modal-editar-empresa" >Editar datos del Refugio</button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-7 col-md-4">
                         <p class="h6 text-muted"><strong>Capacidad </strong> {{ Auth::user()->personaUser->refugio->capacidad.' mascotas.'}} </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-5 col-md-4">
                         <p class="h6 text-muted">{{ Auth::user()->personaUser->refugio->refugiotipo->tipo_refugio}} </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <p class="h6 text-muted"><i class="far fa-envelope"></i>{{Auth::user()->email}}</p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 <p><strong>Descripción </strong>{{ Auth::user()->personaUser->refugio->desc_refugio}}</p>
                 <div class="dropdown-divider"></div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <h5 class=" mb-3">Representante<button type="button" class="btn btn-sm btn-outline-secondary profile-edit-btn border-0" data-toggle="modal" data-target="#modal-editar" >Editar datos del Representante</button>
                         </h5>
                         <p><strong>Nombre y Apellido:</strong>{{Auth::user()->personaUser->nom_persona.' '.Auth::user()->personaUser->apellido}}</p>
@@ -49,7 +49,7 @@
                         <p><strong>Teléfono:</strong> {{Auth::user()->personaUser->telefono}}</p>
                         <p><strong>Dirección:</strong> {{Auth::user()->personaUser->dir_persona}}</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <p><strong>Enlaces</strong> <button type="button" class="btn btn-sm btn-outline-secondary profile-edit-btn border-0" data-toggle="modal" data-target="#modal-enlace">Agregar Link</button></p>
                         @forelse ($enlaces as $enlace)
                             <button type="button" class="btn btn-outline-secondary border-0 btn-sm" onclick="editar_link({{$enlace->id}} , '{{$enlace->link}} ', '{{$enlace->identificador}}')"><i class="far fa-edit"></i></button>

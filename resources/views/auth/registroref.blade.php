@@ -141,9 +141,9 @@
                     <div class="form-group col-6">
                         <select class="custom-select @error('txtsexo') is-invalid @enderror" name="txtsexo" id="txtsexo" required>
                           <option selected>Sexo...</option>
-                          <option value="f">Femenino</option>
-                          <option value="m">Masculino</option>
-                          <option value="o">Otro</option>
+                          <option value="Femenino">Femenino</option>
+                          <option value="Masculino">Masculino</option>
+                          <option value="Otro">Otro</option>
                         </select>
                         @error('txtsexo')
                             <span class="invalid-feedback" role="alert">

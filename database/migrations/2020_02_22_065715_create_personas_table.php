@@ -17,11 +17,11 @@ class CreatePersonasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nom_persona');
             $table->string('apellido');
-            $table->string('dir_persona');
+            $table->string('dir_persona',500)->nullable();
             $table->integer('telefono');
             $table->string('CI');
             $table->string('genero_persona');
-            $table->date('f_nac_persona');
+            $table->date('f_nac_persona')->nullable();
             $table->unsignedBigInteger('pkuser')->nullable();
             $table->foreign('pkuser')->references('id')->on('users');
             $table->timestamps();

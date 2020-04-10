@@ -14,6 +14,10 @@ class RazaSeeder extends Seeder
     {
         DB::table('razas')->insert([
             [
+                'nom_raza'=>'Mestizo',
+                'especie'=>'general',
+                'desc_raza'=>'Ascendencia desconocida.'
+            ],[
                 'nom_raza'=>'Labrador retriever',
                 'especie'=>'canino',
                 'desc_raza'=>'Descripcion en espera.'

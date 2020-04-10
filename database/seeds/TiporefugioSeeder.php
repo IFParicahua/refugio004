@@ -14,11 +14,11 @@ class TiporefugioSeeder extends Seeder
     {
         DB::table('tipo_refugios')->insert([
             [
-            'tipo_refugio'=>'Refugio de gatos'
+            'tipo_refugio'=>'Gatos'
             ],[
-            'tipo_refugio'=>'Refugio de Perros'
+            'tipo_refugio'=>'Perros'
             ],[
-            'tipo_refugio'=>'Refugio mixto'
+            'tipo_refugio'=>'Mixto'
             ]
         ]);
     }

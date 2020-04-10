@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
-
-
 use Exception;
 use Illuminate\Support\Facades\DB;
 
@@ -209,7 +207,10 @@ class PerfilController extends Controller
         try {
             if ($file = $request->file('file_perfil')){
                 $file = $request->file_perfil;
-                $nombre = $file->getClientOriginalName();
+                //$nombre = $file->getClientOriginalName();
+                $date = date("YnjGis");
+                $exten = $file->getClientOriginalExtension();
+                $nombre = 'profile'.Auth::user()->id.'-'.$date.'.'.$exten;
                 $file->move('images', $nombre);
             }
 

@@ -12,7 +12,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark menu">
+    <nav class="navbar navbar-expand-lg navbar-dark menu fixed-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,21 +21,11 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Adopciones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Donaciones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Actividades</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Refugios</a>
-              </li>
+                <li class="nav-item"><a href="{{ url('/index') }}" class="nav-link text-white">Inicio</a></li>
+                <li class="nav-item"><a href="{{ url('/adopciones') }}" class="nav-link text-white">Adopciones</a></li>
+                <li class="nav-item"><a href="{{ url('/donaciones') }}" class="nav-link text-white">Donaciones</a></li>
+                <li class="nav-item"><a href="{{ url('/actividades') }}" class="nav-link text-white">Actividades</a></li>
+                <li class="nav-item"><a href="{{ url('/refugios') }}" class="nav-link text-white">Refugios</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
@@ -50,7 +40,7 @@
                     @endif
                 @else
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ Auth::user()->name }}</a>
+                    <a class="nav-link" href="{{ url('/Perfil') }}">{{ Auth::user()->name }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}"
@@ -67,7 +57,7 @@
         </div>
       </nav>
 
-        <div class="py-0 py-md-4">
+        <div>
             @yield('contenedor')
         </div>
     <!-- Optional JavaScript -->

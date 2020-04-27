@@ -332,8 +332,8 @@ class MascotaController extends Controller
     public function gallery_save(Request $request){
         DB::beginTransaction();
         try {
-            if ($file = $request->file('txtgaleria')){
-                $file = $request->txtgaleria;
+            if ($file = $request->file('txtphoto')){
+                $file = $request->txtphoto;
                 $date = date("YnjGis");
                 $exten = $file->getClientOriginalExtension();
                 $nombre = 'pet-gallery'.Auth::user()->personaUser->refugio->id.'-'.$date.'.'.$exten;
@@ -343,11 +343,12 @@ class MascotaController extends Controller
             $galeria->img_mascota = $nombre;
             $galeria->prioridad = '1';
             $galeria->pkmascota = $request->get('pkmascota');
+            $galeria->descripcion = $request->get('txtdescripcion');
             $galeria->save();
             DB::commit();
             return back();
         } catch (Exception $e) {
-            return redirect('/');
+            return back();
         }
     }
     public function gallery_delete($ids){

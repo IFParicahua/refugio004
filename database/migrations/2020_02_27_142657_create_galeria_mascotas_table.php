@@ -17,6 +17,7 @@ class CreateGaleriaMascotasTable extends Migration
             $table->bigIncrements('id');
             $table->string('img_mascota');
             $table->integer('prioridad');
+            $table->string('descripcion')->nullable();
             $table->unsignedBigInteger('pkmascota');
             $table->foreign('pkmascota')->references('id')->on('mascotas');
             $table->timestamps();

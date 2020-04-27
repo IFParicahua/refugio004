@@ -65,3 +65,16 @@ Route::get('/historial/{id}/delete', 'MascotaController@mascota_historial_delete
 Route::post('/mascota/foto', 'MascotaController@gallery_save');
 Route::get('/mascota/{id}/foto', 'MascotaController@gallery_delete');
 Route::get('/mascota/{id}/procedimiento', 'MascotaController@process_next');
+
+
+Route::get('/index', 'IndexController@index');
+Route::get('/adopciones', 'IndexController@adopciones');
+
+Route::get('/adopciones/id','IndexController@pet_info');
+
+Route::get('/donaciones', 'IndexController@donaciones');
+
+Route::get('/actividades', 'IndexController@actividades');
+
+Route::get('/refugios', 'IndexController@refugios');
+Route::get('/refugios/id', 'IndexController@refugio');

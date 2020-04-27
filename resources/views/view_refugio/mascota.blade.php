@@ -72,14 +72,14 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="row">
-                                <div class="col-5 modal-img">
-                                    <img src="{{ asset('images/perfilPerros.png')}}" id="img-perfil" alt="" class=" img-fluid img-modal">
+                                <div class="col-md-5 modal-img">
+                                    <img src="{{ asset('images/perfilPerros.png')}}" id="img-perfil" alt="" class=" img-fluid img-modal w-100">
                                     <div class="modal-btn btn btn-lg btn-primary">
-                                        <p><i class="fas fa-camera"></i> Actualizar</p>
+                                        <p><i class="fas fa-camera"></i> Subir</p>
                                         <input type="file" id="txtperfil" name="txtperfil" accept="image/x-png, image/jpeg" />
                                     </div>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-md-7">
                                     <div class=" form-group">
                                         <label for="">Nombre de la mascota:</label>
                                         <input type="text" name="txtnombre" id="txtnombre" class=" form-control form-control-sm">

@@ -82,13 +82,8 @@
                 <div class="tab-pane fade show active" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
                     <div class="row">
                         <div class="ml-auto p-2 bd-highlight">
-                            <div class="div_file pt-1 pb-1 pl-2 pr-2 m-0">
-                                <p class="texto-file m-0"><i class="fas fa-plus"></i> Subir Fotos</p>
-                                <form action="{{url ('mascota/foto')}}" method="post" id="formgallery" enctype="multipart/form-data">
-                                    {!! csrf_field() !!}
-                                    <input type="text" value="{{$portada->pkmascota}}" id="pkmascota" name="pkmascota" hidden>
-                                    <input type="file" class="form-control file-item" id="txtgaleria" name="txtgaleria" accept="image/x-png, image/jpeg">
-                                </form>
+                            <div class="pt-1 pb-1 pl-2 pr-2 m-0">
+                                <button type="button" class="btn btn-sm btn-outline-secondary profile-edit-btn border-0" data-toggle="modal" data-target="#modal_subir_foto" ><i class="fas fa-plus"></i>Subir Foto</button>
                             </div>
                         </div>
                     </div>
@@ -162,6 +157,38 @@
         </div>
     </div>
 </div>
+
+
+<div class=" modal fade" id="modal_subir_foto">
+    <div class=" modal-dialog">
+        <div class=" modal-content">
+            <form action="{{url ('mascota/foto')}}" method="post" id="formgallery" enctype="multipart/form-data">
+                {!! csrf_field() !!}
+                <div class=" modal-body">
+                    <input type="text" value="{{$pet->id}}" id="pkmascota" name="pkmascota" hidden>
+                    <div class="row">
+                        <div class="col-12 modal-img form-group">
+                            <img src="{{ asset('images/photo-pet.png')}}" id="img-photo" alt="" class=" img-fluid img-modal w-100" style="object-fit: cover;height: 300px;">
+                            <div class="modal-btn btn btn-lg btn-primary">
+                                <p><i class="fas fa-camera"></i> Subir</p>
+                                <input type="file" id="txtphoto" name="txtphoto" accept="image/x-png, image/jpeg" />
+                            </div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <textarea name="txtdescripcion" id="txtdescripcion" cols="10" rows="10" class=" form-control form-control-sm" style="height: 90px;" maxlength="499">{{$pet->desc_mascota}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class=" modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-sm btn-info">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <div class=" modal fade" id="modal_historial_edit">
     <div class=" modal-dialog">
         <div class=" modal-content">
@@ -195,7 +222,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="row">
-                                <div class="col-5 modal-img">
+                                <div class="col-md-5 modal-img">
                                     <img src="{{ asset('images/'.$portada->img_mascota)}}" id="img-perfil" alt="" class=" img-fluid img-modal w-100">
                                     <div class="modal-btn btn btn-lg btn-primary">
                                         <p><i class="fas fa-camera"></i> Actualizar</p>
@@ -203,7 +230,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-md-7">
                                     <div class=" form-group">
                                         <label for="">Nombre de la mascota:</label>
                                         <input type="text" name="txtnombre" id="txtnombre" class=" form-control form-control-sm" value="{{$pet->nom_mascota}}">
@@ -387,8 +414,12 @@
         };
         reader.readAsDataURL(this.files[0]);
     }
-    document.getElementById('txtgaleria').onchange = function () {
-        $( "#formgallery" ).submit();
+    document.getElementById('txtphoto').onchange = function () {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+        document.getElementById("img-photo").src = e.target.result;
+        };
+        reader.readAsDataURL(this.files[0]);
     }
     function search_size(){
         $("#txtsize").empty();
